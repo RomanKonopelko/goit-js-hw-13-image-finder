@@ -25,6 +25,10 @@ window.addEventListener("scroll", infiniteScroll);
 
 gallery.addEventListener("click", openLargeImg);
 
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+});
+
 form.addEventListener(
   "input",
   debounce((event) => {
