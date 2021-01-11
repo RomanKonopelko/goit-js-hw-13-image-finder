@@ -54,9 +54,10 @@ function addDataToDOM() {
   NewPixabay.fetchRequest()
     .then((request) => pictureTemplate(request))
     .then((markup) => {
-      succsessNotification();
       gallery.insertAdjacentHTML("beforeend", markup);
       if (gallery.children.length === 0) showArrow();
+      if (gallery.children.length === NewPixabay.perPage)
+        succsessNotification();
     })
     .catch(errorNotification)
     .finally(hideLoading());
