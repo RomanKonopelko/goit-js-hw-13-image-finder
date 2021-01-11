@@ -13,6 +13,7 @@ body {
 }
 
 .material-icons {
+  margin-right: 10px;
   color: #0074d9;
 }
 
@@ -35,6 +36,13 @@ body {
 .stats {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+
+  padding: 0 100px;
+}
+
+.stats-item {
+  display: flex;
   align-items: center;
 }
 
